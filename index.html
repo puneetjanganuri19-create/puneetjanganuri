@@ -4,133 +4,434 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puneet | ECE Portfolio</title>
+  <meta name="description" content="Puneet Janganuri's portfolio in Embedded Systems, IoT, and Electronics Engineering.">
+  <title>Puneet Janganuri | Embedded Systems & IoT</title>
+
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: Arial, sans-serif;
-      background: #0b1220;
-      color: #f1f5f9;
+      background: #0b1120;
+      color: #e5e7eb;
       line-height: 1.7;
     }
-    header, section, footer {
-      padding: 28px 8%;
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #111a2e;
+      padding: 15px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
+
+    nav .logo {
+      color: #60a5fa;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #e5e7eb;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
     header {
-      background: #111c31;
+      padding: 90px 8% 75px;
       text-align: center;
+      background: linear-gradient(135deg, #111a2e, #172b49);
     }
-    h1, h2 { color: #60a5fa; }
-    .tagline { color: #cbd5e1; }
-    .project {
-      background: #17243a;
-      padding: 18px;
-      margin: 16px 0;
-      border-radius: 12px;
+
+    header h1 {
+      font-size: clamp(34px, 6vw, 54px);
+      color: #60a5fa;
+      margin-bottom: 10px;
     }
-    a { color: #60a5fa; }
+
+    header h2 {
+      font-size: clamp(18px, 3vw, 25px);
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      color: #cbd5e1;
+    }
+
     .button {
       display: inline-block;
-      padding: 10px 18px;
+      padding: 11px 20px;
+      margin: 6px;
       background: #2563eb;
       color: white;
+      border-radius: 7px;
       text-decoration: none;
-      border-radius: 8px;
-      margin: 6px;
     }
+
+    .button:hover {
+      background: #1d4ed8;
+    }
+
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 55px 25px;
+      scroll-margin-top: 65px;
+    }
+
+    section h2 {
+      color: #60a5fa;
+      font-size: 29px;
+      margin-bottom: 22px;
+    }
+
+    .muted {
+      color: #aebbd0;
+    }
+
+    .skills-grid,
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #131f33;
+      border: 1px solid #263750;
+      border-radius: 12px;
+      padding: 22px;
+    }
+
+    .card h3 {
+      color: #93c5fd;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      margin-bottom: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #1e3454;
+      color: #bfdbfe;
+      padding: 4px 9px;
+      border-radius: 5px;
+      font-size: 12px;
+      margin: 4px 3px 0 0;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #3b82f6;
+      padding: 0 0 28px 22px;
+      margin-left: 6px;
+    }
+
+    .timeline-item h3 {
+      color: #93c5fd;
+    }
+
+    .timeline-item .date {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .achievement {
+      background: #172b49;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #31527a;
+    }
+
     footer {
       text-align: center;
+      padding: 30px 15px;
+      background: #111a2e;
       color: #94a3b8;
+    }
+
+    footer a {
+      color: #60a5fa;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 5px 7px;
+      }
+
+      header {
+        padding: 60px 6%;
+      }
+
+      section {
+        padding: 40px 20px;
+      }
     }
   </style>
 </head>
+
 <body>
+
+  <nav>
+    <div class="logo">Puneet.dev</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Internships</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
   <header>
     <h1>Puneet Janganuri</h1>
-    <p class="tagline">
-      ECE Student | Embedded Systems | IoT
+    <h2>Electronics & Communication Engineering</h2>
+    <p>
+      Aspiring Electronics Engineer focused on Embedded Systems,
+      IoT applications, microcontrollers, sensor interfacing,
+      and hardware-software integration.
     </p>
-    <p>Building practical electronics and embedded projects.</p>
-    <a class="button" href="#projects">View Projects</a>
+
+    <a class="button" href="#projects">Explore My Projects</a>
     <a class="button" href="#contact">Contact Me</a>
   </header>
 
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am an Electronics and Communication Engineering
-      student interested in microcontrollers, embedded
-      programming, electronics and Internet of Things.
-      I enjoy learning through practical projects and
-      developing solutions that combine hardware and software.
+      I am a final-year Electronics and Communication Engineering
+      undergraduate at S.G. Balekundri Institute of Technology,
+      Belagavi, with a Diploma in Electronics and Communication
+      Engineering. I have internship experience in embedded systems,
+      IoT applications, sensor integration, hardware testing,
+      and firmware validation.
+    </p>
+    <p class="muted" style="margin-top: 14px;">
+      I am interested in developing practical embedded solutions
+      that combine electronics, programming, and connected devices.
     </p>
   </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>
-    <p>ESP32 · ESP8266 · Arduino IDE · Sensors · IoT</p>
-    <p>Add C, Embedded C and communication protocols
-    if you have learned or used them.</p>
+
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Programming</h3>
+        <span class="tag">C</span>
+        <span class="tag">C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">Embedded C</span>
+        <span class="tag">Verilog HDL</span>
+      </div>
+
+      <div class="card">
+        <h3>Embedded Systems</h3>
+        <span class="tag">Arduino Uno</span>
+        <span class="tag">NodeMCU ESP8266</span>
+        <span class="tag">8051</span>
+        <span class="tag">Sensor Interfacing</span>
+        <span class="tag">IoT</span>
+      </div>
+
+      <div class="card">
+        <h3>Protocols & Peripherals</h3>
+        <span class="tag">UART</span>
+        <span class="tag">SPI</span>
+        <span class="tag">I2C</span>
+        <span class="tag">PWM</span>
+        <span class="tag">ADC</span>
+        <span class="tag">GPIO</span>
+      </div>
+
+      <div class="card">
+        <h3>Engineering Tools</h3>
+        <span class="tag">Vivado</span>
+        <span class="tag">ModelSim</span>
+        <span class="tag">Keil</span>
+        <span class="tag">Proteus</span>
+        <span class="tag">MATLAB</span>
+        <span class="tag">LTspice</span>
+        <span class="tag">Git & GitHub</span>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
-    <h2>My Projects</h2>
+    <h2>Featured Projects</h2>
 
-    <div class="project">
-      <h3>Smart Home Automation</h3>
+    <div class="project-grid">
+
+      <div class="card">
+        <!-- Replace this placeholder with your actual project photo -->
+        <h3>Smart Seed Preservation System</h3>
+        <p>
+          Built an embedded monitoring system to monitor
+          temperature and humidity and support environmental
+          control for seed storage.
+        </p>
+        <p><strong>Hardware:</strong> Arduino, DHT11,
+          soil moisture sensor, relay module.</p>
+        <p><strong>Key work:</strong> Sensor integration,
+          environmental monitoring, and relay-based control.</p>
+        <span class="tag">Arduino</span>
+        <span class="tag">Sensors</span>
+        <span class="tag">Embedded Systems</span>
+      </div>
+
+      <div class="card">
+        <!-- Replace this placeholder with your actual project photo -->
+        <h3>Obstacle Avoiding Car</h3>
+        <p>
+          Developed an autonomous robot that detects obstacles
+          using ultrasonic sensing and controls its movement
+          to avoid collisions.
+        </p>
+        <p><strong>Hardware:</strong> Arduino, HC-SR04,
+          L298N motor driver.</p>
+        <p><strong>Key work:</strong> Distance sensing,
+          motor control, and embedded hardware integration.</p>
+        <span class="tag">Arduino</span>
+        <span class="tag">HC-SR04</span>
+        <span class="tag">Motor Control</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Internship Experience</h2>
+
+    <div class="timeline-item">
+      <h3>Embedded Systems & IoT Intern</h3>
+      <p class="date">Uilatech, Belagavi | Jun 2023 – Aug 2023</p>
       <p>
-        A project focused on controlling home appliances
-        using a microcontroller and electronic components.
-        Add your actual hardware, features and results here.
+        Developed Arduino- and NodeMCU-based embedded applications,
+        integrated sensors for IoT monitoring, and performed
+        hardware testing, debugging, and firmware validation.
       </p>
     </div>
 
-    <div class="project">
-      <h3>IoT Monitoring System</h3>
+    <div class="timeline-item">
+      <h3>Embedded Systems & IoT in Medical Devices Intern</h3>
+      <p class="date">Saburi Scientific, Goa | Mar 2024 – Jun 2024</p>
       <p>
-        A sensor-based monitoring project.
-        Describe the sensors, software and results
-        from your own implementation.
+        Assisted with embedded firmware development for healthcare
+        devices, sensor and IoT module integration, hardware testing,
+        troubleshooting, documentation, and validation.
       </p>
-    </div>
-
-    <div class="project">
-      <h3>More Engineering Projects</h3>
-      <p>Add another completed project here when ready.</p>
     </div>
   </section>
 
   <section id="education">
     <h2>Education</h2>
-    <p>B.E. in Electronics and Communication Engineering</p>
-    <p>Expected graduation: 2027</p>
+
+    <div class="card" style="margin-bottom: 15px;">
+      <h3>B.E. in Electronics and Communication Engineering</h3>
+      <p>S.G. Balekundri Institute of Technology, Belagavi</p>
+      <p class="muted">Expected graduation: July 2027</p>
+      <p>CGPA: 7.61/10 (through 6th semester)</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 15px;">
+      <h3>Diploma in Electronics and Communication Engineering</h3>
+      <p>R.N. Shetty Polytechnic, Belagavi</p>
+      <p class="muted">Aug 2021 – Jun 2024</p>
+      <p>CGPA: 9.17/10</p>
+    </div>
+
+    <div class="card">
+      <h3>SSLC</h3>
+      <p>St. John's English Medium High School, Belagavi</p>
+      <p>March 2021 | 84%</p>
+    </div>
+  </section>
+
+  <section id="coursework">
+    <h2>Relevant Coursework</h2>
+    <p>
+      Digital Electronics · Analog Electronics · Embedded Systems ·
+      VLSI Design · Digital Signal Processing · Communication Systems ·
+      Microprocessors & Microcontrollers · Control Systems ·
+      Computer Networks · Embedded C · IoT Fundamentals
+    </p>
+  </section>
+
+  <section id="achievements">
+    <h2>Achievement</h2>
+    <div class="achievement">
+      <h3>First Place — Project Contest</h3>
+      <p>
+        Awarded first place in the project contest conducted by
+        S.G. Balekundri Institute of Technology, Belagavi,
+        recognizing innovation, technical implementation, and teamwork.
+      </p>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact Me</h2>
+    <h2>Let's Connect</h2>
     <p>
+      I am interested in opportunities related to Embedded Systems,
+      IoT, and Electronics Engineering.
+    </p>
+
+    <p style="margin-top: 15px;">
       Email:
-      <a href="mailto:YOUR_EMAIL@example.com">
-        YOUR_EMAIL@example.com
+      <a href="mailto:puneetjanganuri19@gmail.com">
+        puneetjanganuri19@gmail.com
       </a>
     </p>
+
     <p>
       LinkedIn:
-      <a href="https://www.linkedin.com/">
-        My LinkedIn Profile
+      <a href="https://www.linkedin.com/in/puneetjanganure"
+         target="_blank" rel="noopener noreferrer">
+        View LinkedIn Profile
       </a>
     </p>
-      <p>
+
+    <p>
       GitHub:
-      <a href="https://github.com/">
-        My GitHub Profile
+      <a href="https://github.com/" target="_blank"
+         rel="noopener noreferrer">
+        Add Your GitHub Profile
+      </a>
+    </p>
+
+    <p style="margin-top: 18px;">
+      <!-- Upload your resume to the repository before enabling this link -->
+      <a class="button" href="Puneet-Resume.pdf" target="_blank">
+        View My Resume
       </a>
     </p>
   </section>
 
   <footer>
-    <p>© 2026 Puneet Janganuri | Engineering Portfolio</p>
+    <p>© 2026 Puneet Janganuri | Embedded Systems & IoT Portfolio</p>
   </footer>
 
 </body>
