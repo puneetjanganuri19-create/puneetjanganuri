@@ -190,6 +190,29 @@
         padding: 40px 20px;
       }
     }
+    
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #131f33;
+  border: 1px solid #263750;
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.project-img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
   </style>
 </head>
 
@@ -305,10 +328,9 @@
       <div class="card">
         <!-- Replace this placeholder with your actual project photo -->
         <h3>Obstacle Avoiding Car</h3>
-        <img
-  src="assets/Obstacle-car.jpg"
-  alt="Obstacle Avoiding Car"
-  class="project-img">
+        <img src="assets/Obstacle-car.jpeg"
+             alt="Obstacle Avoiding Car"
+             class="project-img">
         <p>
           Developed an autonomous robot that detects obstacles
           using ultrasonic sensing and controls its movement
